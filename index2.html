@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cor Processu Mobile</title>
+<script src="Tornado/static/jscript/jquery.js" type="text/javascript"></script>
+<script src="lib/funciones.js" type="text/javascript"></script>
+<script src="lib/md5.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!------------ Login ------------>
+<div data-role="page" id="login">
+  <div data-role="header" align="center" data-theme="b">
+        <img src="images/SID_logo_Mobile.png" width="410" height="100"><div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li data-theme="b"><a onClick="sid()" data-theme="b">www.Integradores.net</a></li>
+                <li data-theme="b"><a onClick="sid()" data-theme="b">SID, C.A.</a></li>
+             </ul>
+        </div>
+		<div id="sales" class="divided">
+		</div>
+	</div>
+  	<div data-role="content" align="center">
+  		<div data-role="content" align="center" id="sales">
+  			<p> El texto va aqui </p>
+  		</div>
+	  	<input type="text" name="textinput" id="textinput" value="" placeholder="Usuario"/>
+		<input type="password" name="password" id="password" placeholder="Contraseña"/>
+    	<a id="lnk_products" >Login</a>
+ 	</div>
+</div>
+<!------------ Fin Login ------------>
+</body>
+<script type="text/javascript">
+		jQuery(document).ready(function()
+		{
+			jQuery('#lnk_products').bind('click', function (event)
+			{
+				var result = get_sales();
+				/*if (result.status.id == 'OK')
+					alert("Autenticacion ok");
+					//window.location = 'index.html\#menu_ppal';
+				else
+					alert("Fallo en la autenticacion");*/
+				event.preventDefault();
+			});
+		});
+	</script>
+</html>
